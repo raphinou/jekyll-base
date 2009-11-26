@@ -2,14 +2,19 @@
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-   <title>{{site.title_prefix}}{{page.title}}</title>
+   <title>Dedomenon {{page.title}}</title>
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css">
    <link rel="stylesheet" href="{{site.base_dir}}/css/print.css" type="text/css" media="print" />
    <link rel="stylesheet" href="{{site.base_dir}}/css/screen.css" type="text/css" media="screen" />
+
+{% unless site.google_search_api_key == nil or site.google_search_api_key == empty %}
+    <script src="http://www.google.com/jsapi?key={{site.google_search_api_key}}" type="text/javascript"></script>
+    <script src="{{site/base_dir}}/javascripts/google_ajax_search.js" type="text/javascript" charset="utf-8"></script>
+{% endunless %}
 </head>
 <body>
-<div id="doc3" class="yui-t4">
+<div id="doc3" class="yui-t5">
    <div id="hd" role="banner">
 
 <div class="breadcrumbs">
@@ -33,6 +38,9 @@
 </div>
 	</div>
 	<div class="yui-b sidemenu"><!-- NAVIGATION HERE -->
+{% unless site.google_search_api_key == nil or site.google_search_api_key == empty %}
+<div id="search"></div>
+{% endunless%}
 {%unless page.subsections == nil or page.subsections == empty %}
 	<h3>Subsections</h3>
 	<ul>
@@ -48,6 +56,17 @@
 	</div>
    <div id="ft" role="contentinfo">Design based on <a href="http://www.styleshout.com/templates/preview/FreshPick1-0/index.html">FreshPick</a></div>
 </div>
+{% unless site.ga_id == nil or site.ga_id == empty %}
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("{{site.ga_id}}");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+{% endunless %}
 </body>
 </html>
 
