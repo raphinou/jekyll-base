@@ -30,6 +30,10 @@ Here are some features:
 
 You can see them in action on the "Dedomenon Documentation website":http://dedomenon.github.com/documentation.
 
+h2. Getting it
+
+bc. git clone git://github.com/raphinou/jekyll-base.git
+
 h2. Configuration
 
 Edit the file _config.yml:
