@@ -707,3 +707,6 @@ color: red;
 font-size: 250%;
 background: #ffdddd;
 }
+pre {
+margin: 10px 20px;
+}
