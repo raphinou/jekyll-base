@@ -9,7 +9,7 @@ h2. What is it?
 
 Jekyll-base is a structure to help start maintaining a website with "jekyll":http://wiki.github.com/mojombo/jekyll, possibly hosting it on github.
 
-h2. What is it no?
+h2. What is it not?
 
 It is not aiming to help maintain a blog.
 
@@ -38,6 +38,7 @@ Edit the file _config.yml:
 * ga_id: Google Analytics web property id for this website. Setting this settings enables Google Analytics Tracking
 * google_search_api_key: your Google Ajax Search API key, needed to activate search on your website ( inpired by "jrmili.com":http://jrmiii.com/2009/03/03/super-easy-sidebar-search-for-jekyll-powered-sites.html )
 * google_search_site_url: Website covered by search functionality.
+* title_prefix: Prefix for every the title of every page of the website
 
 h2. How to create content?
 
