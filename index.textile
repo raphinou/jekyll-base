@@ -42,9 +42,13 @@ Edit the file _config.yml:
 
 h2. How to create content?
 
-To add a new section:
+To add a new section, use the @add_section.sh@ script. It takes two arguments: the path to the parent section and the name of the new section to be created:
 
 bc. bin/add_section.sh . section_name
+
+or to add a subsection to an existing section:
+
+bc. bin/add_section.sh ./parent_section section_name
 
 To add a new post in a section:
 
