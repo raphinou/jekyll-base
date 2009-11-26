@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Dedomenon {{page.title}}</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css">
+   <link rel="stylesheet" href="{{site.base_dir}}/css/print.css" type="text/css" media="print" />
+   <link rel="stylesheet" href="{{site.base_dir}}/css/screen.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="doc3" class="yui-t4">
+   <div id="hd" role="banner">
+
+<div class="breadcrumbs">
+
+{% assign b = " " %}
+{% capture b %}{{site.base_dir}}{% endcapture %}
+<span class="breadcrumb-item"><a href="{{site.base_dir}}/">Home</a></span>
+{% for p in page.categories %}
+<span class="bcsep">&raquo;</span><span class="breadcrumb-item"><a href="{{b}}/{{p}}">{{p}}</a></span>
+{% capture b %}{{b}}/{{p}}{% endcapture %}
+{%endfor%}
+
+</div>
+</div>
+   <div id="bd" role="main">
+	<div id="yui-main">
+	<div class="yui-b"><div class="yui-g">
+	<!-- CONTENT HERE -->
+{{content}}
+	</div>
+</div>
+	</div>
+	<div class="yui-b sidemenu"><!-- NAVIGATION HERE -->
+{%unless page.subsections == nil or page.subsections == empty %}
+	<h3>Subsections</h3>
+	<ul>
+	{% for section in page.subsections %}
+	  <li><a href="{{site.base_dir}}/{{ section }}">{{section}}</a></li>
+	{% endfor %}
+	</ul>
+{%endunless%}
+
+
+        </div>
+	
+	</div>
+   <div id="ft" role="contentinfo">Design based on <a href="http://www.styleshout.com/templates/preview/FreshPick1-0/index.html">FreshPick</a></div>
+</div>
+</body>
+</html>
+
+

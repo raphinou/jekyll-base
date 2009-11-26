@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<!-- posts in this category -->
+{% unless site.categories[page.categories.last] == nil or site.categories[page.categories.last] == empty  %}
+<h2>Documents in {{page.categories.last}}</h2>
+{% for p in site.categories[page.categories.last] %}
+<div class="section list">
+  <p class="line">
+  <a class="title" href="{{site.base_dir}}{{ p.url }}">{{ p.title }}</a>
+  </p>
+  <p class="excerpt">{{ p.excerpt }}</p>
+</div>
+{% endfor %}
+{% endunless %}
+{{ content }}
