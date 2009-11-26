@@ -1,3 +1,5 @@
 permalink: none
 base_dir: 
 ga_id: 
+google_search_api_key: 
+google_search_site_url: http://example.com

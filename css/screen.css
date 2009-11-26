@@ -112,7 +112,8 @@ strong {
 /* start - table */
 table {
 	border-collapse: collapse;
-	margin: 10px 20px;		
+/*	margin: 10px 20px;		
+*/
 }
 tr { background: #FFF; }
 tr.altrow { background: #F9F9F9;	}
@@ -125,6 +126,7 @@ th {
 	color: #555;
 	background: #F0FBFF; 
 	padding: .8em 1em;	
+
   	border-color: #D8EBF5 #D8EBF5 #B9DBEE #D8EBF5;	
 }
 td {
@@ -710,3 +712,31 @@ background: #ffdddd;
 pre {
 margin: 10px 20px;
 }
+
+#search { width: 18em;}
+#search  form {
+	margin: 0px; 
+	padding: 0px; 
+}
+
+#search  input,select, textarea {
+  margin: 0px;
+  padding: 0px
+}
+
+#search  th, td {
+  margin:0px;
+  padding: 0px;
+  border-style: hidden;
+}
+
+.gsc-search-box {
+padding:0px;
+margin: 0px;
+}
+
+.gsc-control {
+width: 180px;
+}
+
+.gsc-control{width:100% !important} 
