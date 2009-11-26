@@ -61,3 +61,7 @@ bc. bin/add_new_post.sh ./path/to/section title
 If you host your website on Github Pages, you might be interested in the base_dir option in _config.yaml: just set it to 
 
 bc. base_dir: /project_name
+
+h2. Contributing
+
+Fork on github and send your pull requests! See "http://github.com/raphinou/jekyll-base":http://github.com/raphinou/jekyll-base
