@@ -48,6 +48,17 @@
 	</div>
    <div id="ft" role="contentinfo">Design based on <a href="http://www.styleshout.com/templates/preview/FreshPick1-0/index.html">FreshPick</a></div>
 </div>
+{% unless site.ga_id == nil or site.ga_id == empty %}
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("{{site.ga_id}}");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+{% endunless %}
 </body>
 </html>
 
