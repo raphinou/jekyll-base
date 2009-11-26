@@ -8,16 +8,13 @@ h1. Homepage
 This is your homepage!
 
 To add a new section:
-<code>
-bin/add_section.sh . section_name
-</code>
+
+bc. bin/add_section.sh . section_name
 
 To add a new post in a section:
-<code>
-bin/add_new_post.sh ./path/to/section title
-</code>
+
+bc. bin/add_new_post.sh ./path/to/section title
 
 If you host your website on Github Pages, you might be interested in the base_dir option in _config.yaml: just set it to 
-<code>
-base_dir: /github_project_name
-</code>
+
+bc. base_dir: /project_name
