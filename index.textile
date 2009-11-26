@@ -3,9 +3,43 @@ layout: default
 subsections: []
 ---
 
-h1. Homepage
+h1. Jekyll-base
 
-This is your homepage!
+h2. What is it?
+
+Jekyll-base is a structure to help start maintaining a website with "jekyll":http://wiki.github.com/mojombo/jekyll, possibly hosting it on github.
+
+h2. What is it no?
+
+It is not aiming to help maintain a blog.
+
+h2. Why develop it?
+
+I was looking for a fast and simple way to maintain documentation for "Dedomenon":http://dedomenon.github.com, the information storage engine behind "MyOwnDB.Com":http://myowndb.com. I was looking for a hosted system I didn't have to maintain, but that would still give me full control of the content so I can move it to another system later if I want to.
+
+h2. Features?
+Here are some features:
+* cross-browser layout thanks to "YUI Grids":http://developer.yahoo.com/yui/grids/
+* "FreshPick":http://www.styleshout.com/templates/preview/FreshPick1-0/index.html based CSS
+* use of Yahoo's CDN for delivery of YUI Grids files
+* "Google Analytics":http://google.com/analytics activated by putting site id in config file
+* "Google Ajax Search":http://code.google.com/apis/ajaxsearch/ activated by putting "your API key":http://code.google.com/apis/ajaxsearch/signup.html in the config file
+* Listing of documents in current section
+* List of subsections
+* Breadcrumbs to help in navigation
+
+You can see them in action on the "Dedomenon Documentation website":http://dedomenon.github.com.
+
+h2. Configuration
+
+Edit the file _config.yml:
+
+* base_dir: prefix added to all links generated. Usefull if you host your website as Github pages in a repository.
+* ga_id: Google Analytics web property id for this website. Setting this settings enables Google Analytics Tracking
+* google_search_api_key: your Google Ajax Search API key, needed to activate search on your website ( inpired by "jrmili.com":http://jrmiii.com/2009/03/03/super-easy-sidebar-search-for-jekyll-powered-sites.html )
+* google_search_site_url: Website covered by search functionality.
+
+h2. How to create content?
 
 To add a new section:
 
